@@ -1,14 +1,4 @@
-## View the webpage version of this markdown file at https://km4htc.github.io/farrowandball/
-
-
----
-title: "farrowandball"
-author: "Alex Styer"
-date: "6/16/2021"
-output:
-  html_document: default
-  pdf_document: default
----
+## View the webpage version of this markdown file [here](https://km4htc.github.io/farrowandball/)
 
 # Farrow&Ball
 The farrowandball package includes 20 preset color palettes of Farrow&Ball paint colors. Main functions include scale_fill_fb() and scale_color_fb() to be applied to ggplot2 objects; these automatically ramp to provide the number of colors needed and can be set to discrete or continuous. plotpal() is an additional helper function to quickly plot a preset palette to view colors alongside hex codes if you wish to create a new manual palette on the fly.
