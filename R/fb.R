@@ -89,6 +89,13 @@ fb_cols <- function(...) {
 fb_pals <- list(
   `all` = fb_colors,
 
+  `original` = fb_cols("Stiffkey Blue", "Cooks Blue", "St Giles Blue",
+                       "Blue Ground", "Stone Blue", "Vardo",
+                       "Arsenic", "Yeabridge Green", "Bancha",
+                       "Churlish Green", "India Yellow", "Babouche",
+                       "Red Earth", "Charlottes Locks", "Incarnadine",
+                       "Rangwali", "Brassica", "Pelt"),
+
   `pinks`  = fb_cols("Middleton Pink", "Nancys Blushes", "Rangwali",
                        "Lake Red", "Rectory Red"),
 
