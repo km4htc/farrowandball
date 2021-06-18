@@ -1,3 +1,12 @@
+---
+title: "farrowandball"
+author: "Alex Styer"
+date: "6/16/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
 ## View a friendlier web version of this markdown file [here](https://km4htc.github.io/farrowandball/)
 
 # Farrow&Ball
