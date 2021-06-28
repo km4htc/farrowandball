@@ -1,147 +1,69 @@
-## View a friendlier web version of this markdown file [here](https://km4htc.github.io/farrowandball/)
+# Farrow&Ball Matplotlib
 
-# Farrow&Ball
-The farrowandball package includes 20 preset color palettes of [Farrow&Ball](https://www.farrow-ball.com) paint colors. Main functions include scale_fill_fb() and scale_color_fb() to be applied to ggplot2 objects; these automatically ramp to provide the number of colors needed and can be set to discrete or continuous. plotpal() is an additional helper function to quickly plot a preset palette to view colors alongside hex codes if you wish to create a new manual palette on the fly.
+This is a python port for the matplotlib library of the [R Package](https://github.com/km4htc/farrowandball) for ggplot2.
 
-##### *I have no affiliation with Farrow&Ball*
-Just a big fan of their water-based, low-odor paint. 
+# Usage
 
-#### Install
-install_github("km4htc/farrowandball")
+The usage is quite simple:
 
-## The palettes
-```{r}
-library(ggplot2)
-library(farrowandball)
-library(patchwork)
+```python
+from farrow_and_ball import *
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define a gray scale image
+x = np.arange(0, np.pi, 0.1)
+y = np.arange(0, 2 * np.pi, 0.1)
+X, Y = np.meshgrid(x, y)
+Z = np.cos(X) * np.sin(Y) * 10
+
+# Get the color map
+cmap = build_colormap(DivergentPalette.DAY, True)
+
+# Draw image
+plt.imshow(Z, origin="lower", cmap=cmap)
+plt.show()
 ```
 
-```{r}
-# deepspec
-deepspec <- plotpal("deepspec") + ggtitle("deepspec")
-# spec
-spec <- plotpal("spec") + ggtitle("spec")
-# lightspec
-lightspec <- plotpal("lightspec") + ggtitle("lightspec")
+One can also directly get the color map definition as a list of strings with `farrow_and_ball.get_palette()`.
 
-p <- deepspec | spec | lightspec
-p
+# Palettes
+
+The palettes are organized in Enums:
+
+```python
+class SpectralPalette(Enum):
+    DEEPSPEC = "deepspec"
+    SPEC = "spec"
+    LIGHTSPEC = "lightspec"
+    LIGHTERSPEC = "lighterspec"
+
+
+class DivergentPalette(Enum):
+    DAY = "day"
+    DAYLONG = "daylong"
+    ARMY = "army"
+    MONO = "mono"
+
+
+class BaseColorPalette(Enum):
+    PINKS = "pinks"
+    PINKS_VAR = "pinks2"
+    REDS = "reds"
+    YELLOWS = "yellows"
+    GREENS = "greens"
+    GREENS_VAR = "greens2"
+    BLUES = "blues"
+    BLUES_VAR = "blues2"
+
+
+class MiscPalette(Enum):
+    TONKA = "tonka"
+    BELLSPOUT = "bellsprout"
+    DOCKERS = "dockers"
+    FRUITYPEBBLES = "fruitypebbles"
 ```
 
-```{r}
-x <- letters[1:25]
-y <- rep(1, 25)
-df <- data.frame(x,y)
-
-# day
-day <- ggplot(df, aes(x=x, y=y, fill=x)) +
-        geom_bar(stat="identity") +
-        scale_fill_fb("day", guide = "none") +
-        theme(axis.text = element_blank(),
-              axis.title = element_blank(),
-              panel.background = element_blank(),
-              axis.ticks = element_blank()) +
-        ggtitle("day")
-  
-# daylong
-daylong <- ggplot(df, aes(x=x, y=y, fill=x)) +
-        geom_bar(stat="identity") +
-        scale_fill_fb("daylong", guide = "none") +
-        theme(axis.text = element_blank(),
-              axis.title = element_blank(),
-              panel.background = element_blank(),
-              axis.ticks = element_blank()) +
-        ggtitle("daylong")
-
-# mono
-mono <- ggplot(df, aes(x=x, y=y, fill=x)) +
-        geom_bar(stat="identity") +
-        scale_fill_fb("mono", guide = "none") +
-        theme(axis.text = element_blank(),
-              axis.title = element_blank(),
-              panel.background = element_blank(),
-              axis.ticks = element_blank()) +
-        ggtitle("mono")
-
-p <- day / daylong / mono
-p
-```
-
-```{r}
-x <- letters[1:4]
-y <- rep(1, 4)
-df <- data.frame(x,y)
-
-tonka <- ggplot(df, aes(x=x, y=y, color=x)) +
-  geom_point(size = 50) +
-  scale_color_fb("tonka", guide = "none") +
-  scale_y_continuous(limits = c(1,1), expand = c(0, 0)) +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank()) +
-        annotate("text", x="a", y= 1, label="tonka", size = 5)
-
-dockers <- ggplot(df, aes(x=x, y=y, color=x)) +
-  geom_point(size = 50) +
-  scale_color_fb("dockers", guide = "none") +
-  scale_y_continuous(limits = c(1,1), expand = c(0, 0)) +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank()) +
-        annotate("text", x="a", y= 1, label="dockers", size = 5)
-
-bellsprout <- ggplot(df, aes(x=x, y=y, color=x)) +
-  geom_point(size = 50) +
-  scale_color_fb("bellsprout", guide = "none") +
-  scale_y_continuous(limits = c(1,1), expand = c(0, 0)) +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank()) +
-        annotate("text", x="a", y= 1, label="bellsprout", size = 5)
-
-fruitypebbles <- ggplot(df, aes(x=x, y=y, color=x)) +
-  geom_point(size = 50) +
-  scale_color_fb("fruitypebbles", guide = "none") +
-  scale_y_continuous(limits = c(1,1), expand = c(0, 0)) +
-  theme(axis.text = element_blank(),
-        axis.title = element_blank(),
-        panel.background = element_blank(),
-        axis.ticks = element_blank()) +
-        annotate("text", x="a", y= 1, label="fruitypebbles", size = 5)
-
-p <- tonka / dockers / bellsprout / fruitypebbles
-p
-```
+One can also directly enter the name as a string, e.g. `build_colormap("day", True)`.
 
 
-# Additional palettes
-#### Spectral
-deepspec,
-spec,
-lightspec,
-lighterspec
-
-#### Divergent
-day,
-daylong,
-army,
-mono
-
-#### Base colors
-pinks,
-pinks2,
-reds,
-yellows,
-greens,
-greens2,
-blues,
-blues2
-
-#### Other
-tonka,
-bellsprout,
-dockers,
-fruitypebbles
