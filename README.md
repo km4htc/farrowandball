@@ -6,6 +6,7 @@ This is a python port for the matplotlib library of the [R Package](https://gith
 
 # Installation
 
+A python version >= 3 is required.
 ```bash
 pip install farrow-and-ball
 ```
@@ -76,7 +77,14 @@ One can also directly enter the name as a string, e.g. `build_colormap("day", Tr
 
 ## Color Maps
 
-![Spectral Palette](https://github.com/vork/farrowandball/raw/master/images/SpectralPalette.png)
-![Divergent Palette](https://github.com/vork/farrowandball/raw/master/images/DivergentPalette.png)
-![Base Color Palette](https://github.com/vork/farrowandball/raw/master/images/BaseColorPalette.png)
-![Misc Palette](https://github.com/vork/farrowandball/raw/master/images/MiscPalette.png)
+### Continuous
+![Spectral Palette](https://github.com/vork/farrowandball/raw/master/images/continuous/SpectralPalette.png)
+![Divergent Palette](https://github.com/vork/farrowandball/raw/master/images/continuous/DivergentPalette.png)
+![Base Color Palette](https://github.com/vork/farrowandball/raw/master/images/continuous/BaseColorPalette.png)
+![Misc Palette](https://github.com/vork/farrowandball/raw/master/images/continuous/MiscPalette.png)
+
+### Discrete
+![Spectral Palette](https://github.com/vork/farrowandball/raw/master/images/discrete/SpectralPalette.png)
+![Divergent Palette](https://github.com/vork/farrowandball/raw/master/images/discrete/DivergentPalette.png)
+![Base Color Palette](https://github.com/vork/farrowandball/raw/master/images/discrete/BaseColorPalette.png)
+![Misc Palette](https://github.com/vork/farrowandball/raw/master/images/discrete/MiscPalette.png)
