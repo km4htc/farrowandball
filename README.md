@@ -1,6 +1,14 @@
 # Farrow&Ball Matplotlib
 
+![https://pypi.org/project/farrow-and-ball/](https://img.shields.io/badge/pypi-0.0.1-blue)
+
 This is a python port for the matplotlib library of the [R Package](https://github.com/km4htc/farrowandball) for ggplot2.
+
+# Installation
+
+```bash
+pip install farrow-and-ball
+```
 
 # Usage
 
@@ -68,7 +76,7 @@ One can also directly enter the name as a string, e.g. `build_colormap("day", Tr
 
 ## Color Maps
 
-![Spectral Palette](images/SpectralPalette.png)
-![Divergent Palette](images/DivergentPalette.png)
-![Base Color Palette](images/BaseColorPalette.png)
-![Misc Palette](images/MiscPalette.png)
+![Spectral Palette](https://github.com/vork/farrowandball/raw/master/images/SpectralPalette.png)
+![Divergent Palette](https://github.com/vork/farrowandball/raw/master/images/DivergentPalette.png)
+![Base Color Palette](https://github.com/vork/farrowandball/raw/master/images/BaseColorPalette.png)
+![Misc Palette](https://github.com/vork/farrowandball/raw/master/images/MiscPalette.png)
