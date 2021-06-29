@@ -66,4 +66,9 @@ class MiscPalette(Enum):
 
 One can also directly enter the name as a string, e.g. `build_colormap("day", True)`.
 
+## Color Maps
 
+![Spectral Palette](images/SpectralPalette.png)
+![Divergent Palette](images/DivergentPalette.png)
+![Base Color Palette](images/BaseColorPalette.png)
+![Misc Palette](images/MiscPalette.png)
