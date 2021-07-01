@@ -3,6 +3,8 @@ import numpy as np
 from farrow_and_ball import *
 from matplotlib.colors import LinearSegmentedColormap
 
+plt.style.use("styles/minimal.mplstyle")
+
 x = np.arange(0, np.pi, 0.1)
 y = np.arange(0, 2 * np.pi, 0.1)
 X, Y = np.meshgrid(x, y)

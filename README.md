@@ -4,6 +4,11 @@
 
 This is a python port for the matplotlib library of the [R Package](https://github.com/km4htc/farrowandball) for ggplot2.
 
+![spec palette charts](https://github.com/vork/farrowandball/raw/master/images/chart/spec.png)
+![tonka palette charts](https://github.com/vork/farrowandball/raw/master/images/chart/tonka.png)
+
+The style for the charts is provided in the [styles](https://github.com/vork/farrowandball/tree/master/styles) folder
+
 # Installation
 
 A python version >= 3 is required.
