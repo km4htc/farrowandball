@@ -1,6 +1,6 @@
 # Farrow&Ball Matplotlib
 
-[![pypi Badge](https://img.shields.io/badge/pypi-0.0.1-blue)](https://pypi.org/project/farrow-and-ball/)
+[![pypi Badge](https://img.shields.io/badge/pypi-0.0.2-blue)](https://pypi.org/project/farrow-and-ball/)
 
 This is a python port for the matplotlib library of the [R Package](https://github.com/km4htc/farrowandball) for ggplot2.
 
