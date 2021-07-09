@@ -9,9 +9,7 @@ plt.style.use("styles/minimal.mplstyle")
 def plot_scatter(cmap_enum, ax, prng, nb_samples=100):
     """Scatter plot."""
     data = [(-0.5, 0.75, "o"), (0.75, 1.0, "s")]
-    ax.set_prop_cycle(
-        cycler(color=build_colormap(cmap_enum, True)(np.linspace(0.0, 1.0, len(data))))
-    )
+    ax.set_prop_cycle(cycler(color=get_interpolated_palette(cmap_enum, len(data))))
     for mu, sigma, marker in data:
         x, y = prng.normal(loc=mu, scale=sigma, size=(2, nb_samples))
         ax.plot(x, y, ls="none", marker=marker)
@@ -34,9 +32,7 @@ def plot_colored_sinusoidal_lines(ax):
 
 def plot_bar_graphs(cmap_enum, ax, prng, min_value=5, max_value=25, nb_samples=5):
     """Plot two bar graphs side by side, with letters as x-tick labels."""
-    ax.set_prop_cycle(
-        cycler(color=build_colormap(cmap_enum, True)(np.linspace(0.0, 1.0, 2)))
-    )
+    ax.set_prop_cycle(cycler(color=get_interpolated_palette(cmap_enum, 2)))
 
     x = np.arange(nb_samples)
     ya, yb = prng.randint(min_value, max_value, size=(2, nb_samples))

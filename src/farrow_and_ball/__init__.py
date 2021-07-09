@@ -8,4 +8,5 @@ from farrow_and_ball.palettes import (
     all_palettes,
     build_colormap,
     get_palette,
+    get_interpolated_palette,
 )

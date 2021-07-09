@@ -333,6 +333,14 @@ def get_palette(palette: Union[Enum, str], reverse: bool = False) -> List[str]:
         return palette
 
 
+def get_interpolated_palette(
+    palette: Union[Enum, str], num_colors: int, reverse: bool = False
+) -> List[List[float]]:
+    return build_colormap(palette, True, reverse=reverse)(
+        [x * 1 / (num_colors - 1) for x in range(0, num_colors)]
+    )
+
+
 def build_colormap(
     palette: Union[Enum, str], continuous: bool, reverse: bool = False
 ) -> LinearSegmentedColormap:

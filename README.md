@@ -1,6 +1,6 @@
 # Farrow&Ball Matplotlib
 
-[![pypi Badge](https://img.shields.io/badge/pypi-0.0.2-blue)](https://pypi.org/project/farrow-and-ball/)
+[![pypi Badge](https://img.shields.io/badge/pypi-0.0.3-blue)](https://pypi.org/project/farrow-and-ball/)
 
 This is a python port for the matplotlib library of the [R Package](https://github.com/km4htc/farrowandball) for ggplot2.
 
@@ -39,7 +39,7 @@ plt.imshow(Z, origin="lower", cmap=cmap)
 plt.show()
 ```
 
-One can also directly get the color map definition as a list of strings with `farrow_and_ball.get_palette()`.
+One can also directly get the color map definition as a list of strings with `farrow_and_ball.get_palette(DivergentPalette.DAY)` or an interpolated one with `farrow_and_ball.get_interpolated_palette(DivergentPalette.DAY, num_classes)`.
 
 # Palettes
 
