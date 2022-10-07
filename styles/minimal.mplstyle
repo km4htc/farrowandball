@@ -1,0 +1,56 @@
+# Common parameters
+# .15 = dark_gray
+# .8 = light_gray
+# .3 = semidark
+
+# Main style
+figure.facecolor: white
+text.color: .15
+font.size: 8
+font.family: sans-serif
+font.sans-serif: Arial, Liberation Sans, DejaVu Sans, Bitstream Vera Sans, sans-serif
+text.usetex: False
+
+# Color maps
+# Sane default for images
+image.cmap: Greys
+
+# Legends
+legend.frameon: False
+legend.numpoints: 1
+legend.scatterpoints: 1
+legend.fontsize: 10
+
+# Line style
+lines.solid_capstyle: round
+
+
+
+# Axes
+axes.axisbelow: True
+axes.facecolor: white
+axes.edgecolor: .3
+axes.linewidth: 1.25
+axes.labelcolor: .15
+axes.labelsize: 8
+
+# Not boxed
+axes.spines.right: False
+axes.spines.top: False
+
+# Grid
+axes.grid: False
+grid.color: .8
+grid.linestyle: :
+
+# Ticks
+xtick.major.size: 4
+ytick.major.size: 4
+xtick.minor.size: 2
+ytick.minor.size: 2
+xtick.direction: out
+ytick.direction: out
+xtick.color: .3
+ytick.color: .3
+xtick.labelsize: 10
+ytick.labelsize: 10
