@@ -1,27 +1,36 @@
----
-title: "farrowandball"
-author: "Alex Styer"
-date: "6/16/2021"
-output: rmarkdown::github_document
----
+farrowandball
+================
+Alex Styer
+6/16/2021
 
 # Farrow&Ball
-The farrowandball package includes 20 preset color palettes of [Farrow&Ball](https://www.farrow-ball.com) paint colors. Main functions include scale_fill_fb() and scale_color_fb() to be applied to ggplot2 objects; these automatically ramp to provide the number of colors needed and can be set to discrete or continuous. plotpal() is an additional helper function to quickly plot a preset palette to view colors alongside hex codes if you wish to create a new manual palette on the fly.
+
+The farrowandball package includes 20 preset color palettes of
+[Farrow&Ball](https://www.farrow-ball.com) paint colors. Main functions
+include scale_fill_fb() and scale_color_fb() to be applied to ggplot2
+objects; these automatically ramp to provide the number of colors needed
+and can be set to discrete or continuous. plotpal() is an additional
+helper function to quickly plot a preset palette to view colors
+alongside hex codes if you wish to create a new manual palette on the
+fly.
 
 ##### *I have no affiliation with Farrow&Ball*
-Just a big fan of their water-based, low-odor paint. 
+
+Just a big fan of their water-based, low-odor paint.
 
 #### Install
-install_github("km4htc/farrowandball")
+
+install_github(“km4htc/farrowandball”)
 
 ## The palettes
-```{r}
+
+``` r
 library(ggplot2)
 library(farrowandball)
 library(patchwork)
 ```
 
-```{r}
+``` r
 # deepspec
 deepspec <- plotpal("deepspec") + ggtitle("deepspec")
 # spec
@@ -33,7 +42,9 @@ p <- deepspec | spec | lightspec
 p
 ```
 
-```{r}
+![](index_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+``` r
 x <- letters[1:25]
 y <- rep(1, 25)
 df <- data.frame(x,y)
@@ -72,7 +83,9 @@ p <- day / daylong / mono
 p
 ```
 
-```{r}
+![](index_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
 x <- letters[1:4]
 y <- rep(1, 4)
 df <- data.frame(x,y)
@@ -121,32 +134,22 @@ p <- tonka / dockers / bellsprout / fruitypebbles
 p
 ```
 
+![](index_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 # Additional palettes
+
 #### Spectral
-deepspec,
-spec,
-lightspec,
-lighterspec
+
+deepspec, spec, lightspec, lighterspec
 
 #### Divergent
-day,
-daylong,
-army,
-mono
+
+day, daylong, army, mono
 
 #### Base colors
-pinks,
-pinks2,
-reds,
-yellows,
-greens,
-greens2,
-blues,
-blues2
+
+pinks, pinks2, reds, yellows, greens, greens2, blues, blues2
 
 #### Other
-tonka,
-bellsprout,
-dockers,
-fruitypebbles
+
+tonka, bellsprout, dockers, fruitypebbles
